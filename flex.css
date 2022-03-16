@@ -1,0 +1,38 @@
+.row {
+    display: flex;
+    /* align-items:initial;
+    justify-content: center; */
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.row > .column {
+    flex-basis: 1px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.tall-height {
+    flex-basis: 75%;
+    flex-grow: 1;
+}
+.short-height {
+    flex-basis: 25%;
+    flex-shrink: 1;
+}
+.row.center-all, .column.center-all {
+    justify-content: center;
+    align-items: center;
+}
+.column.center-horizontal {
+    align-items: center;
+}
+hr {
+    width: 100%;
+}

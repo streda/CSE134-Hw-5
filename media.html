@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .row {
+        display: flex;
+      }
+    </style>
+    <title>Home</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top">
+      <nav>
+        <div class="brand">
+          <h1>Portfolio</h1>
+        </div>
+        <ul class="nav-links">
+          <li class="button"><a href="index.html">Home</a></li>
+          <li class="button"><a href="resume.html">Resume</a></li>
+          <li class="button"><a href="projects.html">Projects</a></li>
+          <li class="button"><a href="media.html">Media</a></li>
+          <li class="button"><a href="contact.html">Contact</a></li>
+          <li class="button"><a href="blog.html">Blog</a></li>
+          <li class="button"><a href="methodtest.html">HTTP Request</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <h1 class="mediaheading">Media</h1>
+      <div class="row center-all">
+        <picture>
+          <source media="(min-width:1440px)" srcset="Images/horizon.png" />
+          <img
+            src="Images/thin.jpg"
+            alt="vertical image in place of horizontal"
+            height="288"
+          />
+        </picture>
+      </div>
+      <h2 class="text">Images</h2>
+      <div class="mediacontainer">
+        <div class="gallery">
+          <picture>
+            <img src="Images/SdRoadsPic.jpg" alt="A glimpse of freeway road" />
+          </picture>
+        </div>
+      </div>
+      <h2 class="text">Videos</h2>
+      <div>
+        <div class="mediacontainer">
+          <div class="galleryVideo">
+            <video
+              src="Videos/BeachSide.mp4"
+              controls
+              width="330"
+              height="240"
+            ></video>
+          </div>
+        </div>
+      </div>
+      <h2 class="text">Tutorials</h2>
+      <div>
+        <div class="mediacontainerTutorial">
+          <div class="galleryTutorial">
+            <iframe
+              src="https://docs.python.org/3/tutorial/"
+              width="350"
+              height="240"
+              title="python tutorial"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text">Twitter Feed</h2>
+      <div>
+        <div class="mediacontainerTutorial">
+          <div class="galleryTutorial">
+            <div style="overflow-y: scroll; height: 100%">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/JavaScript?ref_src=twsrc%5Etfw"
+                >Tweets by JavaScript</a
+              >
+              <script
+                defer
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>&copy; 2022 - All Rights Reserved.</footer>
+  </body>
+</html>

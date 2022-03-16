@@ -1,0 +1,209 @@
+@import url("structure.css");
+
+/* Resume Section */
+.resume {
+  width: 800px;
+  margin: 25px auto;
+  display: flex;
+}
+.resumeheading {
+  padding: 10px;
+  text-align: center;
+}
+.right {
+  width: calc(100% - 250px);
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-bottom: 1px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.right_inner {
+  padding: 30px;
+}
+
+.right_inner .education {
+  margin-top: 30px;
+}
+
+.right_inner .li_wrap {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.right_inner .li_wrap .date {
+  width: 125px;
+}
+
+.right_inner .li_wrap .info {
+  width: calc(100% - 125px);
+  padding-left: 25px;
+  position: relative;
+}
+
+.right_inner .li_wrap .info_title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.right_inner .li_wrap .info:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.right_inner .li_wrap .info:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  width: 2px;
+  height: 90%;
+}
+/* End of Resume */
+
+/* Projects section */
+#proj .proj {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 300px;
+  padding: 10px 0;
+}
+#proj .proj-header h1 {
+  margin-bottom: 50px;
+}
+#proj .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#proj .proj-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#proj .proj-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#proj .proj-info h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+#proj .proj-info h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+/* End Projects section */
+
+
+
+/* Contact Section */
+
+.bodyBox {
+  justify-content: center;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  font-size: 15px;
+  border-width: 1px;
+  border-style: solid;
+}
+/* End of Conatct */
+
+/* Media */
+
+.mediaheading {
+  padding: 10px;
+  text-align: center;
+}
+.mediacontainer {
+  max-width: 1440px;
+  margin: auto;
+  background: #e2f02521;
+  overflow: auto;
+}
+.gallery {
+  margin: 55px;
+  border: 10px solid rgb(76, 82, 109);
+  float:left;
+  width: 290px;
+  
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  align-items:flex-start;
+}
+
+.galleryVideo {
+  margin: 55px;
+  border: 10px solid rgb(76, 82, 109);
+  float:left;
+  /* width: 350px; */
+  /* height: 300px; */
+  align-items: center;
+  
+}
+
+.mediacontainerTutorial {
+  max-width: 1440px;
+  margin: auto;
+  background: #e2f02521;
+  overflow: auto;
+}
+.galleryTutorial {
+  margin: 55px;
+  border: 1px solid rgb(76, 82, 109);
+  float:left;
+  width: 350px;
+  height: 240px;
+  align-items: center;
+}
+
+/* Index Main Image */
+/* .circleImage {
+  width: 400px;
+  clip-path: circle();
+} */
+
+.text {
+  margin:auto;
+  text-align:left;
+  width: 1400px;
+}
+
+h1 h2 h3 {
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

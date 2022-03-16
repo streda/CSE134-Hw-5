@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <label for="id">ID:</label>
+    <input name="id" id="id-input" type="text"/>
+    <label for="article_name">Article Name:</label>
+    <input name="article_name" id="article-name-input" type="text"/>
+    <label for="article_body">Article Body:</label>
+    <textarea name="article_body" id="article-body-input" type="text"></textarea>
+    <br>
+    <button id="postBtn">postBtn</button>
+    <button id="getBtn">getBtn</button>
+    <button id="putBtn">putBtn</button>
+    <button id="deleteBtn">deleteBtn</button>
+  </form>
+  <pre>
+    <output id="response"></output>
+  </pre>
+  <script>
+    const postBtn = document.getElementById("postBtn");
+    const getBtn = document.getElementById("getBtn");
+    const putBtn = document.getElementById("putBtn");
+    const deleteBtn = document.getElementById("deleteBtn");
+
+    const idInput = document.getElementById("id-input");
+    const articleNameInput = document.getElementById("article-name-input");
+    const articleBodyInput = document.getElementById("article-body-input");
+
+    postBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const id = idInput.value;
+      const articleName = articleNameInput.value;
+      const articleBody = articleBodyInput.value;
+      const date = new Date();
+
+      console.log("postBtn clicked!", id, articleName, articleBody, date);
+
+      var xmlHttpRequest = new XMLHttpRequest();
+      xmlHttpRequest.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            const responseText = xmlHttpRequest.responseText;
+            const output = JSON.stringify(JSON.parse(responseText), undefined, 4);
+            document.getElementById("response").innerHTML = output;
+          }
+      };
+      xmlHttpRequest.open("POST", "https://httpbin.org/post", true);
+      xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlHttpRequest.send(`id=${id}&article_name=${articleName}&article_body=${articleBody}&date=${date}`);
+    })
+
+    getBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      
+      const id = idInput.value;
+      const articleName = articleNameInput.value;
+      const articleBody = articleBodyInput.value;
+      const date = new Date();
+
+      console.log("getBtn clicked!", id, articleName, articleBody);
+
+      var xmlHttpRequest = new XMLHttpRequest();
+      xmlHttpRequest.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            const responseText = xmlHttpRequest.responseText;
+            const output = JSON.stringify(JSON.parse(responseText), undefined, 4);
+            document.getElementById("response").innerHTML = output;
+          }
+      };
+      xmlHttpRequest.open("GET", `https://httpbin.org/get?id=${id}&article_name=${articleName}&article_body=${articleBody}&date=${date}`, true);
+      xmlHttpRequest.send();
+    })
+
+    putBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      
+      const id = idInput.value;
+      const articleName = articleNameInput.value;
+      const articleBody = articleBodyInput.value;
+      const date = new Date();
+
+
+      console.log("putBtn clicked!", id, articleName, articleBody);
+
+      var xmlHttpRequest = new XMLHttpRequest();
+      xmlHttpRequest.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            const responseText = xmlHttpRequest.responseText;
+            const output = JSON.stringify(JSON.parse(responseText), undefined, 4);
+            document.getElementById("response").innerHTML = output;
+          }
+      };
+      xmlHttpRequest.open("PUT", "https://httpbin.org/put", true);
+      xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlHttpRequest.send(`id=${id}&article_name=${articleName}&article_body=${articleBody}&date=${date}`);
+    })
+
+    deleteBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      
+      const id = idInput.value;
+      const articleName = articleNameInput.value;
+      const articleBody = articleBodyInput.value;
+      const date = new Date();
+
+      console.log(" deleteBtn clicked!", id, articleName, articleBody);
+
+      var xmlHttpRequest = new XMLHttpRequest();
+      xmlHttpRequest.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            const responseText = xmlHttpRequest.responseText;
+            const output = JSON.stringify(JSON.parse(responseText), undefined, 4);
+            document.getElementById("response").innerHTML = output;
+          }
+      };
+      xmlHttpRequest.open("DELETE", "https://httpbin.org/delete", true);
+      xmlHttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlHttpRequest.send(`id=${id}&article_name=${articleName}&article_body=${articleBody}&date=${date}`);
+    })
+  </script>
+</body>
+</html>

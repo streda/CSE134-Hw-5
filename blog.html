@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./blog.js" type="module"></script>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="styledcrud.css" />
+    <style type="text/css">
+      #username{
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="top">
+        <div class="brand">
+          <h1>Portfolio</h1>
+        </div>
+        <ul class="nav-links">
+          <li class="button"><a href="index.html">Home</a></li>
+          <li class="button"><a href="resume.html">Resume</a></li>
+          <li class="button"><a href="projects.html">Projects</a></li>
+          <li class="button"><a href="media.html">Media</a></li>
+          <li class="button"><a href="contact.html">Contact</a></li>
+          <li class="button"><a href="blog.html">Blog</a></li>
+          <li class="button"><a href="methodtest.html">HTTP Request</a></li>
+          <li>
+            <button id="login-btn">Log In</button>
+            <button id="logout-btn" class="hidden">Log Out</button>
+            <span id="username"></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h1>View posts</h1>
+      <template id="post-template">
+        <div class="container card">
+          <div class="header">
+            <div class="title"></div>
+            <div class="date"></div>
+          </div>
+          <div class="summary body"></div>
+          <div class="footer">
+            <button class="update">
+              <img src="Images/pencil.png" class="icon" alt="edit" />
+            </button>
+            <button class="delete">
+              <img src="Images/trash.png" class="icon" alt="delete" />
+            </button>
+          </div>
+        </div>
+      </template>
+      <div class="list" id="post-list"></div>
+      <button id="open-add">Add</button>
+    </section>
+
+    <template id="add-post">
+      <dialog class="post-dialog">
+        <h1>Add a post</h1>
+        <form method="dialog" id="create-form">
+          <div class="input-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="title" />
+          </div>
+          <div class="input-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" class="date" />
+          </div>
+          <div class="input-group">
+            <label for="summary">Summary</label>
+            <textarea name="summary" class="summary"></textarea>
+          </div>
+          <div>
+            <button>Submit</button>
+            <button value="cancel">Cancel</button>
+          </div>
+        </form>
+      </dialog>
+    </template>
+
+    <template id="edit-post">
+      <dialog class="post-dialog">
+        <h1>Edit Post</h1>
+        <form method="dialog" id="update-form">
+          <div class="input-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="title" />
+          </div>
+          <div class="input-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" class="date" />
+          </div>
+          <div class="input-group">
+            <label for="summary">Summary</label>
+            <textarea name="summary" class="summary"></textarea>
+          </div>
+          <input type="hidden" name="index" class="index" />
+          <div>
+            <button>Submit</button>
+            <button value="cancel">Cancel</button>
+          </div>
+        </form>
+      </dialog>
+    </template>
+
+    <template id="mydialog">
+      <dialog>
+        <form method="dialog">
+          <div class="message"></div>
+          <div>
+            <input type="text" class="input" />
+          </div>
+          <div>
+            <button class="ok">Ok</button>
+            <button class="cancel">Cancel</button>
+          </div>
+        </form>
+      </dialog>
+    </template>
+
+    <template id="login">
+      <dialog>
+        <h1>Login</h1>
+        <form method="dialog">
+          <div class="input-group">
+            <label for="login-email">Email</label>
+            <input type="email" name="email" id="login-email" />
+          </div>
+          <div class="input-group">
+            <label for="login-password">Password</label>
+            <input type="password" name="password" id="login-password" />
+          </div>
+          <div>
+            <button>Submit</button>
+            <button value="cancel">Cancel</button>
+          </div>
+        </form>
+      </dialog>
+    </template>
+  </body>
+</html>
+
+<!-- <b onmouseover=“alert(‘pwdned’)”>roll me</b>
+ -->

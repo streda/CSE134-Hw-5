@@ -1,0 +1,59 @@
+:root {
+  --white: #fff;
+  --pink : #9153c9;
+ 
+}
+body {
+  background: linear-gradient(to right, #bebec4, #474647);
+}
+
+.main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #dee2ee);
+}
+
+.top {
+  background-color: rgb(46, 43, 39);
+}
+
+.top h2 {
+  color: #c6b7e2;
+}
+
+.top h1  {
+  color: #c6b7e2;
+} 
+
+.nav-links li a {
+  color: var(--white);
+}
+
+
+.resume {
+  background: var(--white);
+}
+
+.title {
+  color: #3525af;
+}
+
+.right_inner {
+  color: #292b2f;
+}
+
+.right_inner .li_wrap .date,
+.right_inner .li_wrap .info_title {
+  color: var(--pink);
+}
+.right_inner .li_wrap .info:before,
+.right_inner .li_wrap .info:after {
+  background-color: var(--pink);
+}
+
+#proj .proj-info {
+  background-image: linear-gradient(60deg, #103864 0%, #80b4ec 100%);
+  color: var(--white);
+}
+
+#proj .proj-info p {
+  color: var(--white);
+}

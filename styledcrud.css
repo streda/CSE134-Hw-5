@@ -1,0 +1,80 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  /* width: calc(20% - 1rem); */
+  min-width: 10rem;
+  margin: 0.5rem;
+  height: 8.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gainsboro;
+  border-radius: 1rem 1rem 0 0;
+  height: 2rem;
+  padding: 0 1rem;
+}
+
+.card .header .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card .header .date {
+  font-style: italic;
+  color: gray;
+}
+
+.card .body {
+  flex-grow: 1; 
+  box-sizing: border-box;
+  border-left: 0.25rem solid gainsboro;
+  border-right: 0.25rem solid gainsboro;
+  padding: 0 1rem;
+}
+
+.card .footer {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  border-radius: 0 0 1rem 1rem;
+  background-color: gainsboro;
+  height: 2rem;
+
+}
+
+.card .footer button {
+  width: calc(50% - 5px);
+  background-color: transparent;
+  border-radius: 1rem;
+  height: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+
+.input-group > * {
+  width: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.post-dialog {
+  width: 75vw;
+}
+.icon {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}

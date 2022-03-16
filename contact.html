@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="top">
+      <nav>
+        <div class="brand">
+          <h1>Portfolio</h1>
+        </div>
+        <ul class="nav-links">
+          <li class="button"><a href="index.html">Home</a></li>
+          <li class="button"><a href="resume.html">Resume</a></li>
+          <li class="button"><a href="projects.html">Projects</a></li>
+          <li class="button"><a href="media.html">Media</a></li>
+          <li class="button"><a href="contact.html">Contact</a></li>
+          <li class="button"><a href="blog.html">Blog</a></li>
+          <li class="button"><a href="methodtest.html">HTTP Request</a></li>
+
+        </ul>
+      </nav>
+    </div>
+    <main class="main row center-all">
+      <form class="column">
+        <fieldset class="column">
+          <legend>Contact Info</legend>
+          <div class="column">
+            <label for="fname">Name *</label>
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="First Name"
+            />
+            <input type="text" name="lname" placeholder="Last Name" />
+          </div>
+          <div class="column">
+            <label for="email">Email Address *</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="column">
+            <label for="contactmethod">Contact preferences?</label>
+            <select name="contactmethod" id="contactmethod">
+              <optgroup label="Digitally">
+                <option>Call</option>
+                <option>Email</option>
+                <option>Text</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="column">
+          <legend>Message</legend>
+          <div class="column">
+            <label for="subject">Subject *</label>
+            <input type="text" name="subject" id="subject" list="subjects" />
+            <datalist id="subjects">
+              <option value="Job Offer"></option>
+              <option value="Skill inquiry"></option>
+            </datalist>
+          </div>
+          <div class="column">
+            <label for="body">Body *</label>
+            <textarea name="body" id="body" rows="10"></textarea>
+          </div>
+          <div>
+            <button class="css-animation-button">Submit</button>
+          </div>
+        </fieldset>
+        <table>
+          <caption>
+            Call Hours
+          </caption>
+          <colgroup>
+            <col span="2" style="background-color: rgb(213, 243, 209)" />
+          </colgroup>
+          <tr>
+            <th>Days</th>
+            <th>Hours</th>
+          </tr>
+          <tr>
+            <td>Mon-Fri</td>
+            <td>8:00am - 4:00pm</td>
+          </tr>
+        </table>
+        <details>
+          <summary><strong>NOTE:</strong></summary>
+          <p>
+            Please leave your organization name, full name, phone number and a
+            convinient time to call you back.
+          </p>
+        </details>
+      </form>
+    </main>
+    <footer>&copy; 2022 - All Rights Reserved.</footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="alert">Alert</button>
+    <button id="confirm">Confirm</button>
+    <button id="prompt">Prompt</button>
+    <button id="saferprompt">Safer Prompt</button>
+    <output id="output"></output>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js"></script>
+    <script>
+      const output = document.getElementById("output");
+      document.getElementById("alert").addEventListener("click", (event) => {
+        alert("Alert pressed!");
+      });
+      document.getElementById("confirm").addEventListener("click", (event) => {
+        const confirmed = confirm("Do you confirm this?");
+        output.textContent = `Confirmed: ${confirmed}`;
+      });
+      document.getElementById("prompt").addEventListener("click", (event) => {
+        const userInput = prompt("What is your name?");
+        output.innerHTML =
+          userInput === null
+            ? "User didn't enter anything"
+            : `Prompt result: ${userInput}`;
+      });
+      document
+        .getElementById("saferprompt")
+        .addEventListener("click", (event) => {
+          const userInput = prompt("What is your name?");
+          output.innerHTML =
+            userInput === null
+              ? "User didn't enter anything"
+              : DOMPurify.sanitize(`Prompt result: ${userInput}`, {
+                  SAFE_FOR_TEMPLATES: true,
+                });
+        });
+    </script>
+  </body>
+</html>
